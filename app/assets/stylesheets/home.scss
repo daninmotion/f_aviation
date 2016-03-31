@@ -1,0 +1,164 @@
+/***Carousel***/
+
+.carousel-fade {
+    .carousel-inner {
+        .item {
+            transition-property: opacity;
+        }
+        
+        .item,
+        .active.left,
+        .active.right {
+            opacity: 0;
+        }
+
+        .active,
+        .next.left,
+        .prev.right {
+            opacity: 1;
+        }
+
+        .next,
+        .prev,
+        .active.left,
+        .active.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .carousel-control {
+        z-index: 2;
+    }
+}
+
+html, 
+body, 
+.carousel, 
+.carousel-inner, 
+.carousel-inner .item {
+    height: 100%;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    text-indent: -999px;
+    border: 1px solid #b5b1a8;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #000 \9;
+    background-color: transparent;
+} 
+
+/***About***/
+
+.about {
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+
+  p {
+      margin-top: 2rem;
+      margin-right: 1rem;
+      margin-left: 1rem;
+      line-height: 30px;
+      display: inline-block
+  }
+
+  h2  {
+    font-size: 30px;
+    font-weight: 100;
+    letter-spacing: 10px;
+  }
+}
+
+/***Footer***/
+
+.footer {
+  background-color: black;
+}
+
+.footer, .logo {
+  margin-top: 3rem;
+}
+
+.footer h3, p {
+  color: #a7a7a7;
+}
+
+.btn-social {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  font-size: 35px;
+  font-weight: 900;
+  color: white;
+  text-align: center;
+}
+
+.list-inline .twitter a:hover {
+  color: #1da1f2;
+  text-decoration: none;
+}
+
+.list-inline .instagram a:hover {
+  color: #02497a;
+  text-decoration: none;
+}
+
+.list-inline .youtube a:hover {
+  color: #cc181e;
+  text-decoration: none;
+}
+
+.list-inline .facebook a:hover {
+  color: #3c5899;
+  text-decoration: none;
+}
+
+.social {
+  padding-bottom: 5rem;
+}
+
+/*===Media Queries===*/
+
+/***iPads***/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  
+  .carousel-indicators li {
+    display: none;
+  }
+
+  .about {
+    margin-top: -100px;
+  }
+
+}
+
+/***iPhone(small screen)**/
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  
+  .carousel {
+    position: relative;
+    margin-top: 1rem; 
+  }
+
+  .carousel-indicators li {
+    display: none;
+  }
+
+  .about {
+    margin-top: -200px; 
+  }
+
+  .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    line-height: 1;
+    margin-top: 4rem;
+  }
+
+}
